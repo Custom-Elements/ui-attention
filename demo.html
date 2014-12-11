@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>ui-attention</title>
+    <script src="http://localhost:35729/livereload.js"></script>
+    <link rel="import" href="node_modules/polymer/polymer.html">
+    <link rel="import" href="src/ui-attention.html">
+    <style>
+      body {
+        font-family: "Helvetica Neue", "Helvetica", Arial;
+      }
+      #display {
+      }
+    </style>
+  </head>
+  <body unresolved>
+    <ui-attention>
+      <span id="display"></span>
+    </ui-attention>
+    <script>
+      document.addEventListener('polymer-ready', function() {
+        //poke your element here
+        var tick = 0;
+        setInterval(function() {
+          tick++;
+          document.querySelector('#display').innerText = tick;
+        }, 1000)
+      })
+    </script>
+  </body>
+</html>
