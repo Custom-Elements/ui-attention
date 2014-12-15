@@ -21,7 +21,6 @@ Wrap this around HTML to get attention on any change.
 
       attached: ->
         observer = new MutationObserver (mutations) =>
-          console.log 'mut'
           @zoomIn()
         observer.observe @, childList: true, subtree: true, characterData: true
 
